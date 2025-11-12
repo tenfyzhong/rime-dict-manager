@@ -13,12 +13,12 @@ import (
 // listCmd represents the list command
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "漂亮地列出用户词典中的所有词条",
-	Long:  `读取并以易于阅读的格式显示用户词典文件中的所有词条, 按分组呈现.`,
+	Short: "List all entries in the user dictionary beautifully",
+	Long:  `Reads and displays all entries in the user dictionary file in an easy-to-read format, presented by group.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		d := dict.NewDictionary(userDictFile)
 		if err := d.Load(); err != nil {
-			log.Fatalf("加载词典文件失败: %v", err)
+			log.Fatalf("Failed to load dictionary file: %v", err)
 		}
 
 		fmt.Printf("词典文件: %s\n\n", userDictFile)
