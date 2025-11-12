@@ -13,10 +13,8 @@
 
 ## 安装
 
-确保你已经安装了 Go (版本 1.21 或更高), 然后运行以下命令:
-
 ```bash
-go install github.com/tenfyzhong/rime-dict-manager@latest
+brew install tenfyzhong/tap/rime-dict-manager
 ```
 
 ## 配置
