@@ -6,6 +6,7 @@ import (
 	"os/exec"
 
 	"github.com/spf13/cobra"
+	"github.com/tenfyzhong/rime-dict-manager/config"
 )
 
 var (
@@ -22,6 +23,7 @@ var rootCmd = &cobra.Command{
 	Long: `A command-line tool to query, add, modify, and delete entries
 in a Rime user dictionary file, with automatic Wubi code generation
 and Rime redeployment capabilities.`,
+	Version: config.Version,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
