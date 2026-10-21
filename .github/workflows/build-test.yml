@@ -1,13 +1,20 @@
 name: build and test
 on:
-  pull_request_target:
+  push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+
 jobs:
   build-test:
     uses: tenfyzhong/workflows/.github/workflows/go-build-test.yml@main
     with:
-      path: .
+      go-version: '1.26.10'
+      path: ./...
       enable-codecov: true
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

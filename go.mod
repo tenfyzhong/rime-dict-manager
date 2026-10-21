@@ -2,6 +2,8 @@ module github.com/tenfyzhong/rime-dict-manager
 
 go 1.25.3
 
+toolchain go1.26.10
+
 require (
 	github.com/mattn/go-runewidth v0.0.19
 	github.com/spf13/cobra v1.10.1
